@@ -11,7 +11,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-const OTP_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes
+const OTP_TIMEOUT_MS = 0.5 * 60 * 1000; // 5 minutes
 
 const otpCodes = new Map(); // Map of phone numbers to OTP codes and timestamps
 
