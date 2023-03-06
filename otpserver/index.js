@@ -36,7 +36,7 @@ app.post('/api/login', async (req, res) => {
     const timestamp = Date.now();
     otpCodes.set(phoneNumber, { code, timestamp });
 
-    res.status(200).json({ message: 'OTP code sent!', timestamp });
+    res.status(200).json({ message: 'OTP code (' + code + ') sent!', timestamp });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Failed to send OTP code.' });
